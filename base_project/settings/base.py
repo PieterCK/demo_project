@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "base_project.apps.core"
 ]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
@@ -76,7 +77,7 @@ TEMPLATES = [
 
 DATABASES = {
     "default": dj_database_url.config(
-        default=config("DATABASE_URL", default="postgres://simple:simple@localhost:5432/simple"),
+        default=config("DATABASE_URL", default="sqlite:../../db.sqlite3"),
         conn_max_age=600,
     )
 }
