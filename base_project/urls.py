@@ -17,7 +17,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from base_project.apps.core import views
-import debug_toolbar
 
 urlpatterns = [
     path('admin/', admin.site.urls),
