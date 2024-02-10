@@ -1,20 +1,21 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
    <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Pieter CK - demo site</title>
-      <script rel="stylesheet" src="{% static 'css/bootstrap.css' %}"></script>
-      <script rel="stylesheet" src="{% static 'css/style.cs' %}"></script>   
+      <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+      <link href="{% static 'css/style.css' %}" rel="stylesheet"> 
    </head>
    <body>
     {% block content %}
     {% endblock content%}
-   </body>
-    <script src="{% static 'js/jquery.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/menu-color.js' %}"></script>
-    <script src="{% static 'js/modernizr.js' %}"></script>
-    <script src="{% static 'js/script.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/menu-color.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/modernizr.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+    </body>
 </html>

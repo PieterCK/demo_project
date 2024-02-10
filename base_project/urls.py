@@ -17,8 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from base_project.apps.core import views
+from decouple import config
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="index")
 ]
+
+if config("DEBUG", default=True, cast=bool):
+    urlpatterns+=[path("__debug__/", include("debug_toolbar.urls"))]
