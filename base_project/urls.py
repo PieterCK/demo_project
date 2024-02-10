@@ -23,6 +23,3 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name="index")
 ]
-
-if config("DEBUG", default=True, cast=bool):
-    urlpatterns+=[path("__debug__/", include("debug_toolbar.urls"))]
