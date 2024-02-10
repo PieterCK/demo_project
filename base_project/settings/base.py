@@ -32,7 +32,7 @@ ROOT_URLCONF = "base_project.urls"
 
 INTERNAL_IPS = ["127.0.0.1"]
 
-WSGI_APPLICATION = "base_project.wsgi.application"
+WSGI_APPLICATION = "wsgi.application"
 
 
 # ==============================================================================
@@ -128,7 +128,7 @@ STATIC_URL = "/static/"
 
 STATIC_ROOT = BASE_DIR.parent.parent / "static"
 
-STATICFILES_DIRS = [BASE_DIR.parent / "static"]
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
